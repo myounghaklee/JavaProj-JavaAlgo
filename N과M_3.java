@@ -23,7 +23,7 @@ public class N과M_3 {
 		
 		arr = new int [R];
 		
-		permu(0);
+		permu(0); 
 		
 	}
 	
