@@ -18,6 +18,7 @@ public class PowerSetTest {
 			input[i] = sc.nextInt();
 		}
 		generateSubSet(0);
+		System.out.println("총 경우의 수 : " + totalCnt);
 
 	}
 	
