@@ -1,27 +1,26 @@
-private static boolean nextPermutation(int[] arr) {
-    int i = arr.length-1;
-    while(i > 0 && arr[i-1] >= arr[i]) i--;
-    if(i <= 0) return false;
+package 알고리즘다시듣기;
 
-    int j = arr.length-1;
+import java.util.Scanner;
 
-    while(arr[j] <= arr[i-1]) j--;
+public class boj_10972_다음순열 {
+	private static int[] input;
+	private static String tmp;
 
-    swap(arr, i-1, j);
-    j = arr.length - 1;
-    while(i < j) {
-        swap(arr, i, j);
-        i++;
-        j--;
-    }
-    return true;
-}
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int N = sc.nextInt();
+		input = new int[N];
+		
+		for(int i = 0; i<N ; i++) {
+			input[i] = sc.nextInt();
+		}
+		tmp = input.toString();
+		nextPermu(0);
+		
+	}
 
-private static void swap(int[] arr, int index1, int index2) {
-    int temp = arr[index1];
-    arr[index1] = arr[index2];
-    arr[index2] = temp;
-}
-public class boj_10972_�������� {
-
+	private static void nextPermu(int i) {
+		
+		
+	}
 }
