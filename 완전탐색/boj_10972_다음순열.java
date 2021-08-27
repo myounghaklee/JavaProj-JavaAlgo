@@ -1,26 +1,4 @@
-package ì•Œê³ ë¦¬ì¦˜ë‹¤ì‹œë“£ê¸°;
 
-import java.util.Scanner;
+public class boj_10972_´ÙÀ½¼ø¿­ {
 
-public class boj_10972_ë‹¤ìŒìˆœì—´ {
-	private static int[] input;
-	private static String tmp;
-
-	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
-		int N = sc.nextInt();
-		input = new int[N];
-		
-		for(int i = 0; i<N ; i++) {
-			input[i] = sc.nextInt();
-		}
-		tmp = input.toString();
-		nextPermu(0);
-		
-	}
-
-	private static void nextPermu(int i) {
-		
-		
-	}
 }
