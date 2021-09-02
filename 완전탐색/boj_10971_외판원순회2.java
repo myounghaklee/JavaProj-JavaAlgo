@@ -35,24 +35,20 @@ public class boj_10971_외판원순회2 {
 		//기저조건
 		if(cnt ==N ) {
 			int sum = 0;
-			/*
-			 * for(int i =0; i<N-1 ;i++) { sum += map[permuRsult[i]][permuRsult[i+1]]; }
-			 */
-			for(int i =0; i<N ;i++) {
-				//sum += map[permuRsult[i]][permuRsult[i+1]];
-				System.out.print(permuRsult[i] + " ");
-			}
 			for(int i =0; i<N-1 ;i++) {
 				sum += map[permuRsult[i]][permuRsult[i+1]]; 
-				if(i==2) sum +=map[permuRsult[i]][permuRsult[0]];
+				if(i==N-2) sum +=map[permuRsult[i+1]][permuRsult[0]];
+				//갈수없는경우는 max처리함
+				if(map[permuRsult[i]][permuRsult[i+1]]<=0 || map[permuRsult[i+1]][permuRsult[0]]<=0) {
+					sum = Integer.MAX_VALUE;
+				}
 			}
-			System.out.print(" " + sum);
-			System.out.println();
 			min= min<sum? min : sum;
 		}
 		
+		//순서 만든후 i ->i+1로 가는 경로의 값들을 '기저조건'에서 다 더하여 비교
 		for(int i =0 ;i<N; i++) {
-			if(visited[i]) continue;
+			if(visited[i] || map[cnt][i]<=0) continue;
 			visited[i] = true;
 			permuRsult[cnt] = i;
 			permu(cnt+1);
