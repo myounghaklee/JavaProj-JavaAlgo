@@ -46,3 +46,5 @@ size()
 ## 비트마스킹
 
 관련문제 : 종이접기
+
+![image-20210910234242316](/Users/myounghak/Library/Application Support/typora-user-images/image-20210910234242316.png)
