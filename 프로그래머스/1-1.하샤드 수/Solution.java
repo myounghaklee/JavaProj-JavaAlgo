@@ -1,5 +1,6 @@
 package 하샤드;
 
+
 public class Solution {
     public boolean solution(int x) {
 
