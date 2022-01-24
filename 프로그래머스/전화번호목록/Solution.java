@@ -17,6 +17,8 @@ class Solution {
             if(i!= phone_book.length-1) {
                 for (int j = i + 1; j < phone_book.length; j++){
                     if(phone_book[j].startsWith(s)) return false;
+                    if(phone_book[i].startsWith(phone_book[j])) return false;
+
 
                 }
 
