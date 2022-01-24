@@ -16,7 +16,7 @@ class Solution {
             char[] now = phone_book[i].toCharArray();
             if(i!= phone_book.length-1) {
                 for (int j = i + 1; j < phone_book.length; j++){
-                    if(phone_book[j].contains(s)) return false;
+                    if(phone_book[j].startsWith(s)) return false;
 
                 }
 
