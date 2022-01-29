@@ -1,41 +1,47 @@
 package T3.타겟넘버;
 
+import java.util.LinkedList;
+import java.util.Queue;
 import java.util.Stack;
 
 public class Solution {
     private static char calculate[] = {'+', '-'};
     private static int ans =0;
-    public static void main(String[] args) {
-        Solution s = new Solution();
-        int [] num = {1, 1, 1, 1, 1};
 
-        int ans1 = s.solution(num, 3);
-
-        System.out.println(ans1);
-    }
 
     public int solution(int[] numbers, int target) {
-        int answer = 0;
+
         Stack <Integer> s = new Stack<>();
-        for(int i : numbers)s.add(i);
-        bfs(s,target, 0 );
+        Queue<Integer> q = new LinkedList<>();
+        for(int i : numbers){
+            s.add(i);
+            q.add(i);
+        }
+        bfs(q,target, 0 );
+
         return ans;
     }
 
-    private void bfs(Stack<Integer> s, int target, int cnt) {
-        if(cnt == target) {
-            ans++;
+    public void bfs(Queue<Integer> q, int target, int now) {
+        System.out.println("in  " + now +" "+  q.size() + " " + q.peek());
+        //기저조건
+        if((now == target) && q.size()==0) {
+            System.out.println("기저조건 ind : " );
+            ++ans;
             return;
         }
-        while(s.isEmpty()){
-            int first = s.pop();
-            int second = s.pop();
-            int plus = first+second;
-            int minus=first-second;
+            while (!q.isEmpty()) {
 
-            bfs(s, target, plus);
-            bfs(s, target, minus);
-            s.add(plus);s.add(minus);
-        }
+                int minus = q.poll() * (-1);
+                int plus = minus * (-1);
+                //int a = plus + now;
+                //int b = minus + now;
+                //System.out.println("a 랑 b : " + a + " " + b);
+                bfs(q, target, now+ plus);
+                bfs(q, target,now+minus);
+
+                //q.add(plus+now);q.add(minus+now);
+            }
+
     }
 }
