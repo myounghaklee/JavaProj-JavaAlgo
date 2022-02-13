@@ -16,14 +16,14 @@ public class boj6064_카잉달력_solution2 {
 			st = new StringTokenizer(br.readLine());
 			int M = Integer.parseInt(st.nextToken());
 			int N = Integer.parseInt(st.nextToken());
-			int X = Integer.parseInt(st.nextToken());
-			int Y = Integer.parseInt(st.nextToken());
+			int X = Integer.parseInt(st.nextToken())-1;
+			int Y = Integer.parseInt(st.nextToken())-1;
 			int nx=X; int ny = 1;
 			int max = M*N/gcd(M, N);
 			int chk =0;
 			for(int i=X ; i<max; i+=M) {
 				if(i%N == Y) {
-					System.out.println(i);
+					System.out.println(i+1);
 					chk = 1; 
 					break;
 				}
