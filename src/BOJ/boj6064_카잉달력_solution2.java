@@ -19,8 +19,17 @@ public class boj6064_카잉달력_solution2 {
 			int X = Integer.parseInt(st.nextToken())-1;
 			int Y = Integer.parseInt(st.nextToken())-1;
 			int nx=X; int ny = 1;
-			int max = M*N/gcd(M, N);
+			int max = M*N/gcd(M, N); //최소공배수 
 			int chk =0;
+			
+			/*3
+			10 12 3 9
+			 (1,1)  (2,2) ..... (10,10) 
+			 (1,11), (2,12), (3,1) 
+			 * (3,Y) 
+			 * 
+			 * 
+			 */
 			for(int i=X ; i<max; i+=M) {
 				if(i%N == Y) {
 					System.out.println(i+1);
