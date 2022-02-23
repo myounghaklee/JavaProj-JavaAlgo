@@ -36,6 +36,17 @@ public class boj11403_경로찾기 {
 				}
 			}
 		}
+		for(int i =N-1; i>=0 ;i--) {
+			for(int j = N-1; j>=0 ;j--) {
+				
+				//if(map[i][j]==1)ans[i][j] = 1;
+				
+				for(int k =N-1; k>=0 ;k--) {
+					if(map[j][i]==1 && map[i][k]==1)
+						ans[j][k] = 1;
+				}
+			}
+		}
 		
 		for (int i = 0; i < N; i++) {
 			for (int j = 0; j < N; j++) {
