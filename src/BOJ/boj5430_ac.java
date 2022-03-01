@@ -62,17 +62,8 @@ public class boj5430_ac {
 					}
 				} // end if D
 			} // end for Loop
-//			System.out.print("[");
-//			for(int i= 0; i<deque.size(); i++) {
-//				if(i==deque.size())System.out.print(deque.poll());
-//				else {
-//					System.out.print(deque.poll() + ",");
-//				}
-//			}
-//			System.out.println("]");
 
-			// System.out.println(sb.length() + " " );
-			if (sb.length() == 0) {
+			if (sb.length() == 0) {//error아닐때 
 
 				sb.append('['); // 여는 대괄호 먼저 StringBuilder에 저장
 
