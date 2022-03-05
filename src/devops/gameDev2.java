@@ -69,12 +69,13 @@ public class gameDev2 {
 	        //}
 		}
 		
+		
 		private static String findFive(int y , int x, int h, int w, int n , String board[]) {
 			for (int j = 1; j <= 19; j++) {
 				for (int i = 1; i <= 19; i++) {
 					if (board[i].charAt(j) != '0') {
 						for (int d = 0; d < 4; d++) {
-							if (board[i][j][d] == 0 && calc(i, j, d, board[i][j]) == 5) {
+						if (board[i][j][d] == 0 && calc(i, j, d, board[i][j]) == 5) {
 								return board[i].charAt(j) + "\n" + i + " " + j + "\n";
 							}
 						}
