@@ -43,6 +43,8 @@ public class boj1535_안녕 {
 			}
 		}
 		System.out.println(memo[99]);
+		String a; 
+		a.
 	}
 	
 	
