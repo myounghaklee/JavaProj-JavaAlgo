@@ -18,6 +18,16 @@ public class 문제2c_다양성 {
 			//return countType;
 	}
 
+	public static int getElementTypeCountAns(int[] data, int n)
+	{
+			int countType = 0;
+			for(int i=0; i<n; i++) {
+				
+				if(i==0 || data[i-1]!=data[i+1])countType++;
+			}
+			return countType;
+	}
+	
 	public static void main(String[] args) throws Exception {
 			int n = scanner.nextInt();
 			int[] data = new int[n];
