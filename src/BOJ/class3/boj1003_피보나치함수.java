@@ -1,3 +1,5 @@
+package BOJ.class3;
+
 import java.util.Scanner;
  //재귀로 푸니깐 계속 시간초과,,,,
 // Dp로 2중배열써서 해결
