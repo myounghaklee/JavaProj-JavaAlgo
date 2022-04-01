@@ -25,7 +25,7 @@ public class 문제3d_피보나치나머지 {
 		tmpFibop[1] = 1;
 		tmpFibop[2] = 1;
 		
-		for(int i = 2; i<n; i++) {
+		for(int i = 3; i<=n; i++) {
 			tmpFibop[i] = tmpFibop[i-1] + tmpFibop[i-2]; 
 		}
 		return tmpFibop;
