@@ -1,5 +1,7 @@
 package TopCoder.전체탐색;
 
+import java.util.HashMap;
+
 public class 즐거운파티 {
 
 	public static void main(String[] args) {
@@ -8,6 +10,15 @@ public class 즐거운파티 {
 		String second[] = {"talking", "speaking", "discussion", "meeting"};
 		
 		int ans = bestInvitation(first,second);
+		System.out.println("====ans=====: " + ans);
+		ans =bestInvitation2(first,second);
+	}
+
+	private static int bestInvitation2(String[] first, String[] second) {
+		HashMap<String,Integer> dic = new HashMap<String, Integer>();
+		
+		
+		return 0;
 	}
 
 	private static int bestInvitation(String[] first, String[] second) {
