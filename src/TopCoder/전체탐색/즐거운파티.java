@@ -10,15 +10,28 @@ public class 즐거운파티 {
 		String second[] = {"talking", "speaking", "discussion", "meeting"};
 		
 		int ans = bestInvitation(first,second);
-		System.out.println("====ans=====: " + ans);
+		System.out.println("====ans111=====: " + ans);
 		ans =bestInvitation2(first,second);
+		System.out.println("====ans222=====: " + ans);
+		
 	}
 
 	private static int bestInvitation2(String[] first, String[] second) {
 		HashMap<String,Integer> dic = new HashMap<String, Integer>();
+		for(int i = 0 ;i< first.length; i++) {
+			dic.put(first[i], 0);
+			dic.put(second[i], 0);
+		}
+		for(int i = 0 ;i<first.length; i++) {
+			dic.put(first[i], dic.get(first[i])+1);
+			dic.put(second[i], dic.get(second[i])+1);
+		}
+		int ans = 0;
+		for(String s: dic.keySet()) {
+			ans = Math.max(ans,  dic.get(s));
+		}
 		
-		
-		return 0;
+		return ans;
 	}
 
 	private static int bestInvitation(String[] first, String[] second) {
