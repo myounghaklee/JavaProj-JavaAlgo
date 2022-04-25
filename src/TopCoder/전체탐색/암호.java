@@ -13,7 +13,14 @@ public class 암호 {
 		int numbers[] = {1,2,3};
 		long answer = encrypt1(numbers);
 		System.out.println(answer);
+		answer = encrypt2(numbers);
+		System.out.println(answer);
 
+	}
+
+	private static long encrypt2(int[] numbers) {
+		// TODO Auto-generated method stub
+		return 0;
 	}
 
 	private static long encrypt1(int[] numbers) {
